@@ -13,7 +13,7 @@
 # for j in range(1,6,1):
 #     print(j, end=' ')
 
-tot = 0
+# tot = 0
 # for i in range(1, 11):
 #     tot += i
 
@@ -74,6 +74,7 @@ tot = 0
 
 # for (first, last) in a:
 #     print(f"{first} + {last} = {first + last}")
+# -------------------------------------------------
 
 marks = [90,25,67,45,80]
 
@@ -92,18 +93,71 @@ marks = [90,25,67,45,80]
 #         print(f"{i + 1}번 학생은 불합격입니다.")
 
 # for문과 continue
-for i, v in enumerate(marks):
-    if v < 60: continue
+# for i, v in enumerate(marks):
+#     if v < 60: continue
 
-    print(f"{i + 1}번 학생은 합격입니다.")
+#     print(f"{i + 1}번 학생은 합격입니다.")
 
+# for num in range(len(marks)):
+#     if marks[num] < 60:
+#         continue
+#     print(f"{num + 1}번 학생은 합격입니다.")
 
+# -------------------------------------------------
+# sum = 0
+# for i in range(1,11):
+#     sum += i
 
+# print(sum)
 
+# -------------------------------------------------
 
+# # Quiz - 1부터 200까지의 합계를 구하세요(단, 3의 배수는 제외하고 더하세요)
+# sum = 0
+# for i in range(1, 201):
+#     if i % 3 != 0:
+#         sum += i
 
+# print(sum)
 
+# -------------------------------------------------
 
+# for i in range(2, 10):
+#     for j in range(1, 10):
+#         print(i*j, end='\t')
+#     print('')
 
+# -------------------------------------------------
 
+# Quiz 2
+# 1. 1 ~ 100까지의 합계에서 최초 1000을 넘게하는 숫자를 구하세요.
+# sum = 0
+# for i in range(1, 101):
+#     sum += i
+#     if sum >= 1000:
+#         print(f"최초로 1000을 넘게하는 숫자: {i} / 1 ~ {i}까지의 합계 : {sum}")
+#         break
+
+# -------------------------------------------------
+# '리스트' 내포(list comprehension)
+a  = [1,2,3,4]
+
+result = []
+
+for num in a:
+    result.append(num*3)
+
+print(result)
+
+result2 = [num * 3 for num in a] # 루프(for문) 부여
+print(result2)
+
+result3 = [num * 3 for num in a if num % 2 == 0] # 조건(if문) 부여
+print(result3)
+
+# 응용
+result4 = [x*y for x in range(2, 10)
+                for y in range (1, 10)] # 각각의 변수에 맞추어 for - if문 적용
+
+print(result4)   
 
