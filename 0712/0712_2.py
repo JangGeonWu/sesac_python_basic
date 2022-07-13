@@ -278,6 +278,7 @@ print(exp1(10, 2))
 # 6
 
 def coffeemachine(customer):
+    
 
     coffee = int(input(f'{customer}씨, 어떤 커피 드릴까요?(1:아메리카노/2:카페라떼/3:카푸치노/4:에스프레소)'))
     print('\n#1. 뜨거운 물을 준비한다.')
