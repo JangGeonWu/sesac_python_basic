@@ -1,12 +1,19 @@
 from math import ceil
-def solution(w,h):
-    ratio = w / h if w > h else h / w
+from collections import Counter
+def solution(progresses, speeds):
+    success_list = []
+    success_list.append(ceil((100 - progresses[0]) / speeds[0]))
     
-    num_square = ceil(ratio)
-    
-    loss = h * num_square if w > h else w * num_square
-    
-    
-    return (w*h) - loss
+    for i in range(1, len(progresses)):
+        bp = ceil((100 - progresses[i]) / speeds[i])
+        av_bp = success_list[-1]
+        if bp <= av_bp:
+            success_list.append(av_bp)
+        else:
+            success_list.append(bp)
 
-print(solution(3,3))    
+    cnt = Counter(success_list)
+
+    return list(dict(cnt).values())
+
+print(solution([93, 30, 55], [1, 30, 5]))    
